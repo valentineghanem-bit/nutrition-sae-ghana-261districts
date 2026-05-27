@@ -1,0 +1,64 @@
+QA PASSED
+=========
+
+Project:        Project 10 - Ghana child-nutrition small-area estimation
+Audit date:     2026-05-26 (badge flipped from QA_CONDITIONAL after scaffold + QA-7 fix)
+Audit report:   QA_Audit_Report_Project10_Nutrition.md
+Protocol:       AIPOCH v6.0 / qa Project10_Nutrition --full + --iterative
+                (re-run after scaffold added in Phase 14 and QA-7 minor resolved)
+
+Stage results
+-------------
+QA-0  Output completeness ......... 5/5 deliverables present
+QA-1  Manuscript peer review ...... PASS
+QA-2  Poster review ............... PASS
+QA-3  Dashboard HTML review ....... PASS  (0 console errors / 0 page errors)
+QA-4  Master CSV data quality ..... PASS
+QA-5  GitHub repository review .... PASS  (reproducibility 92.6 %, target >= 85 %)
+QA-6  Reconciliation matrix ....... PASS  (100 % concordance, 0 critical)
+QA-7  Methodological stress test .. ROBUST  (open minor resolved by 14_residual_moran.py)
+
+Critical discrepancies:           0
+Critical methodological issues:   0
+Reconciliation verdict:           PASS
+Stress test verdict:              ROBUST
+Reproducibility score:            92.6 %
+
+Phase 14 readiness
+------------------
+Repository scaffold complete:
+  README.md (13-section structure)
+  requirements.txt (pinned, including plotly==6.7.0)
+  CITATION.cff (YAML valid)
+  LICENSE (MIT + CC BY 4.0 for outputs)
+  .gitignore
+  Dockerfile
+  run_all.sh
+  .github/workflows/ci.yml (YAML valid)
+  scripts/14_residual_moran.py (closes QA-7 open minor)
+
+Gating status
+-------------
+/disseminate (Phase 12)   UNBLOCKED. Submission to Maternal & Child Nutrition
+                          permitted.
+/github-publish (Phase 14) READY. Run the Sync-Check protocol to issue SYNC_PASS
+                           and push to github.com/valentineghanem-bit/
+                           nutrition-sae-ghana-261districts (kebab-case repo
+                           slug from the study title, 32 chars).
+
+Open polish items (LOW severity, all non-blocking)
+--------------------------------------------------
+- C2 Function docstrings on a few figure-script helpers
+- C5 Bare open() calls (no exception handling) - acceptable for an analysis
+     pipeline; tighten if the repo is ever used in production.
+- Poster: embed COCOBOD institutional logo asset before printing.
+- Dashboard: add aria-label attributes to #map, #shap, #region for screen
+  readers.
+
+These items do not block QA_PASSED or submission.
+
+Supersedes
+----------
+QA_CONDITIONAL_2026-05-26.txt (badge flipped on the same day after the binding
+action item - the GitHub repo scaffold - was completed and QA-7 open minor was
+explicitly resolved).

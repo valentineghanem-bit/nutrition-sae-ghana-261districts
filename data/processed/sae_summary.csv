@@ -1,0 +1,5 @@
+outcome,alpha,natl_ref_pct,phi_spatial,ridge_lambda,smooth_rho,region_R2,district_min,district_max,hotspots_P95,beta_poverty_intensity,beta_illiteracy_rate,beta_nhis_uninsured_rate,beta_improved_sanitation_pct,beta_employment_rate,beta_under15_share,beta_urbanicity
+stunting,-1.7001,16.72,0.368,2.0,0.45,0.621,7.5,34.6,31,0.0533,0.038,0.0402,-0.0196,-0.0349,0.2634,0.0537
+anaemia,-0.0788,47.88,0.349,2.0,0.45,0.749,30.5,74.4,60,0.1259,0.1881,0.0774,-0.0978,-0.0222,0.1006,-0.0052
+iycf,1.2269,76.05,0.369,2.0,0.45,-0.133,58.5,91.8,37,-0.2269,0.1883,-0.0014,0.0201,0.0079,0.0784,-0.0773
+diarrhoea,-1.8868,14.68,0.348,2.0,0.45,0.296,4.2,34.1,51,-0.0914,0.0293,0.1389,0.0577,-0.0299,0.3301,-0.1002

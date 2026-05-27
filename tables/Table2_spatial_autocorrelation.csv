@@ -1,0 +1,5 @@
+Outcome,Moran's I (queen),z,p,Moran's I (KNN5),LISA HH / LL,Gi* hot / cold
+Stunting,0.937,23.3,0.002,0.851,27 / 44,41 / 51
+Anaemia,0.959,23.2,0.002,0.909,51 / 54,61 / 62
+IYCF inadequacy,0.836,20.8,0.002,0.829,31 / 22,43 / 42
+Diarrhoea,0.821,19.8,0.002,0.694,30 / 20,62 / 45

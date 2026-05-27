@@ -1,0 +1,21 @@
+Outcome,Rank,Determinant,Mean |SHAP|,95% bootstrap CI,Stability SD,Stability (CV)
+Stunting,1,Under-15 share,2.318,1.851-2.799,0.257,0.11
+Stunting,2,Improved water,1.249,0.999-1.627,0.162,0.13
+Stunting,3,Improved sanitation,0.758,0.436-1.235,0.214,0.28
+Stunting,4,Poverty intensity,0.312,0.216-0.453,0.076,0.24
+Stunting,5,Poverty incidence,0.256,0.084-0.675,0.143,0.56
+Anaemia,1,Improved sanitation,5.504,4.794-6.300,0.406,0.07
+Anaemia,2,Illiteracy rate,2.849,2.033-3.645,0.414,0.14
+Anaemia,3,Poverty incidence,1.335,0.759-1.825,0.285,0.21
+Anaemia,4,Poverty intensity,1.183,0.930-1.478,0.174,0.15
+Anaemia,5,Under-15 share,0.805,0.557-1.075,0.137,0.17
+IYCF inadequacy,1,Improved water,1.619,1.064-2.454,0.375,0.23
+IYCF inadequacy,2,Poverty intensity,1.581,1.266-1.851,0.172,0.11
+IYCF inadequacy,3,Under-15 share,1.558,1.134-1.953,0.247,0.16
+IYCF inadequacy,4,Illiteracy rate,1.308,0.989-1.726,0.231,0.18
+IYCF inadequacy,5,Improved sanitation,0.713,0.480-0.967,0.150,0.21
+Diarrhoea,1,Under-15 share,2.728,2.375-3.136,0.206,0.08
+Diarrhoea,2,Improved sanitation,1.958,1.619-2.286,0.200,0.10
+Diarrhoea,3,Improved water,0.993,0.721-1.270,0.163,0.16
+Diarrhoea,4,NHIS-uninsured share,0.916,0.609-1.204,0.152,0.17
+Diarrhoea,5,Urbanicity,0.404,0.183-0.629,0.135,0.34

@@ -1,0 +1,44 @@
+DATA DICTIONARY - master_261district_nutrition.csv (261 x 46)
+================================================================
+district_id
+    Sequential district identifier (1-261)
+district
+    MMDA name (GSS 2021 Census)
+region
+    Region (16-region 2022 structure)
+lat,lon
+    District centroid coordinates (decimal degrees)
+urban_class,urbanicity
+    Metropolitan/Municipal/District; ordinal 3/2/1
+total_pop,log_pop
+    Total population 2021 Census; natural log
+poverty_incidence
+    % population multidimensionally poor (Census 2021)
+poverty_intensity
+    Mean deprivation share among the poor (%)
+illiteracy_rate
+    % population illiterate (Census 2021)
+nhis_uninsured_rate
+    % population without NHIS cover (Census 2021)
+employment_rate
+    % labour force employed (Census 2021)
+under15_share
+    % population aged under 15 (Census 2021)
+improved_water_pct
+    % households improved water (GDHS 2022, region)
+improved_sanitation_pct
+    % households improved sanitation (GDHS 2022, region)
+women_literate_pct
+    % women literate (GDHS 2022, region)
+<outcome>_region_pct
+    GDHS 2022 region direct estimate (%): stunting HAZ<-2SD u5; anaemia Hb<11 6-59m; iycf inadequacy (fails >=1 IYCF practice) 6-23m; diarrhoea 2-week prevalence u5
+<outcome>_district_pct
+    BYM2 SAE posterior mean district prevalence (%)
+<outcome>_district_lo95/hi95
+    95% credible interval bounds (%)
+<outcome>_exceedance_prob
+    Posterior P(district prevalence > national mean)
+<outcome>_lisa_cluster
+    Local Moran cluster: HH/LL/HL/LH/ns (p<0.05, FDR)
+<outcome>_gistar_class
+    Getis-Ord Gi*: hotspot/coldspot/ns (|z|>1.96)

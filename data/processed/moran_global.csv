@@ -1,0 +1,5 @@
+outcome,moran_I_queen,z_queen,p_queen,moran_I_knn5,p_knn5
+stunting,0.9366,23.272,0.002,0.8505,0.002
+anaemia,0.9587,23.175,0.002,0.9092,0.002
+iycf,0.836,20.759,0.002,0.8288,0.002
+diarrhoea,0.821,19.805,0.002,0.6944,0.002

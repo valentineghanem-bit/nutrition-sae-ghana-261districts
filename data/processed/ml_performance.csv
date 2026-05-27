@@ -1,0 +1,9 @@
+outcome,model,spatial_LOROCV_R2,spatial_LOROCV_RMSE,fold_R2_mean,fold_R2_sd
+stunting,RandomForest,0.428,4.249,-15.196,34.374
+stunting,XGBoost,0.379,4.426,-16.61,40.533
+anaemia,RandomForest,0.761,5.71,-4.787,13.011
+anaemia,XGBoost,0.82,4.951,-4.086,11.694
+iycf,RandomForest,-0.148,7.044,-11.467,25.691
+iycf,XGBoost,-0.065,6.783,-13.785,36.968
+diarrhoea,RandomForest,0.197,5.584,-2.444,4.731
+diarrhoea,XGBoost,-0.064,6.431,-3.732,6.785

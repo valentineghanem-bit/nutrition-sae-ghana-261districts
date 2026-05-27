@@ -1,0 +1,5 @@
+Outcome,phi (spatial fraction),Hotspots P>0.95,GWR dAICc,GWR non-stationary,XGB LOROCV R2,RF LOROCV R2,Hotspot AUC-PR
+Stunting,0.37,31,321,Yes,0.38,0.43,0.773
+Anaemia,0.35,60,368,Yes,0.82,0.76,0.947
+IYCF inadequacy,0.37,37,249,Yes,-0.07,-0.15,0.417
+Diarrhoea,0.35,51,225,Yes,-0.06,0.20,0.476

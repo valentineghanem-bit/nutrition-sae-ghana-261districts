@@ -1,0 +1,262 @@
+district_id,district,region,stunting_giz,stunting_class,anaemia_giz,anaemia_class,iycf_giz,iycf_class,diarrhoea_giz,diarrhoea_class
+1,Asunafo North Municipal,Ahafo,-0.322,ns,-2.297,coldspot,1.701,ns,-0.613,ns
+2,Asunafo South,Ahafo,-0.039,ns,-1.706,ns,0.967,ns,0.105,ns
+3,Asutifi North,Ahafo,-0.176,ns,-2.599,coldspot,1.181,ns,-1.308,ns
+4,Asutifi South,Ahafo,0.48,ns,-2.688,coldspot,1.059,ns,0.023,ns
+5,Tano North Municipal,Ahafo,0.253,ns,-2.725,coldspot,1.26,ns,-0.365,ns
+6,Tano South Municipal,Ahafo,0.869,ns,-1.859,ns,1.285,ns,1.664,ns
+7,Adansi Asokwa,Ashanti,0.409,ns,-1.162,ns,-0.012,ns,2.524,hotspot
+8,Adansi North,Ashanti,0.252,ns,-1.323,ns,-0.082,ns,2.256,hotspot
+9,Adansi South,Ashanti,0.549,ns,-0.502,ns,0.538,ns,2.823,hotspot
+10,Afigya Kwabre North,Ashanti,1.024,ns,-0.907,ns,0.511,ns,2.869,hotspot
+11,Afigya Kwabre South,Ashanti,0.558,ns,-2.054,coldspot,-0.69,ns,2.426,hotspot
+12,Ahafo Ano North Municipal,Ashanti,0.545,ns,-2.056,coldspot,0.786,ns,-0.188,ns
+13,Ahafo Ano South East,Ashanti,0.975,ns,-1.196,ns,1.193,ns,2.575,hotspot
+14,Ahafo Ano South West,Ashanti,0.891,ns,-1.237,ns,1.215,ns,2.528,hotspot
+15,Akrofuom,Ashanti,0.35,ns,-1.006,ns,-0.247,ns,2.173,hotspot
+16,Amansie Central,Ashanti,0.416,ns,-0.947,ns,-0.296,ns,2.809,hotspot
+17,Amansie South,Ashanti,-0.047,ns,-0.682,ns,-0.006,ns,1.797,ns
+18,Amansie West,Ashanti,0.426,ns,-0.593,ns,0.034,ns,2.313,hotspot
+19,Asante Akim Central Municipal,Ashanti,0.685,ns,-1.473,ns,0.442,ns,3.041,hotspot
+20,Asante Akim North Municipal,Ashanti,1.04,ns,-1.203,ns,0.879,ns,3.857,hotspot
+21,Asante Akim South Municipal,Ashanti,0.534,ns,-1.072,ns,0.543,ns,2.36,hotspot
+22,Asokore Mampong Municipal,Ashanti,-0.67,ns,-2.902,coldspot,-2.013,coldspot,0.083,ns
+23,Asokwa Municipal,Ashanti,-0.889,ns,-2.868,coldspot,-1.78,ns,-0.05,ns
+24,Atwima Kwanwoma,Ashanti,-0.573,ns,-1.927,ns,-1.161,ns,-0.017,ns
+25,Atwima Mponua,Ashanti,0.113,ns,-1.394,ns,0.875,ns,1.941,ns
+26,Atwima Nwabiagya North,Ashanti,0.862,ns,-1.024,ns,0.694,ns,2.946,hotspot
+27,Atwima Nwabiagya South Municipal,Ashanti,0.504,ns,-2.096,coldspot,0.483,ns,-0.361,ns
+28,Bekwai Municipal,Ashanti,0.576,ns,-0.842,ns,0.183,ns,3.065,hotspot
+29,Bosome Freho,Ashanti,0.809,ns,-1.401,ns,0.306,ns,3.643,hotspot
+30,Bosomtwi,Ashanti,0.444,ns,-1.107,ns,0.344,ns,2.343,hotspot
+31,Ejisu Municipal,Ashanti,-0.057,ns,-2.05,coldspot,-1.077,ns,1.107,ns
+32,Ejura Sekyedumase Municipal,Ashanti,1.209,ns,-0.513,ns,3.016,hotspot,3.395,hotspot
+33,Juaben Municipal,Ashanti,0.543,ns,-1.069,ns,0.418,ns,2.297,hotspot
+34,"Kumasi Metropolitan Area (KMA)-Bantama, Manhyia North, Manhyia South, Nhyiaeso, & Subin",Ashanti,-0.876,ns,-2.847,coldspot,-2.019,coldspot,-0.141,ns
+35,Kwabre East,Ashanti,-0.009,ns,-2.052,coldspot,-1.048,ns,1.187,ns
+36,Kwadaso Municipal,Ashanti,-0.788,ns,-2.108,coldspot,-1.4,ns,-0.41,ns
+37,Mampong Municipal,Ashanti,0.984,ns,-0.667,ns,1.03,ns,3.257,hotspot
+38,Obuasi East,Ashanti,0.225,ns,-1.098,ns,-0.252,ns,1.948,ns
+39,Obuasi Municipal,Ashanti,0.253,ns,-1.12,ns,-0.198,ns,2.201,hotspot
+40,Offinso Municipal,Ashanti,1.316,ns,-1.054,ns,1.29,ns,3.914,hotspot
+41,Offinso North,Ashanti,0.586,ns,-1.764,ns,2.553,hotspot,1.297,ns
+42,Oforikrom Municipal,Ashanti,-0.859,ns,-2.27,coldspot,-1.593,ns,-0.424,ns
+43,Old Tafo Municipal,Ashanti,-0.304,ns,-2.51,coldspot,-1.575,ns,0.607,ns
+44,Sekyere Afram Plains,Ashanti,1.516,ns,0.694,ns,3.699,hotspot,4.176,hotspot
+45,Sekyere Central,Ashanti,1.475,ns,0.004,ns,2.442,hotspot,4.115,hotspot
+46,Sekyere East,Ashanti,0.439,ns,-1.287,ns,0.319,ns,2.419,hotspot
+47,Sekyere Kumawu,Ashanti,1.087,ns,-0.806,ns,1.299,ns,4.169,hotspot
+48,Sekyere South,Ashanti,0.922,ns,-1.6,ns,0.134,ns,3.279,hotspot
+49,Suame Municipal,Ashanti,-0.308,ns,-2.526,coldspot,-1.566,ns,0.608,ns
+50,Banda,Bono,-0.099,ns,0.208,ns,3.836,hotspot,-0.321,ns
+51,Berekum East Municipal,Bono,-1.282,ns,-2.18,coldspot,1.529,ns,-2.043,coldspot
+52,Berekum West,Bono,-1.118,ns,-1.961,coldspot,1.338,ns,-1.732,ns
+53,Dormaa Central Municipal,Bono,-0.815,ns,-2.423,coldspot,1.732,ns,-1.591,ns
+54,Dormaa East,Bono,-1.155,ns,-2.435,coldspot,1.376,ns,-1.999,coldspot
+55,Dormaa West,Bono,-0.703,ns,-1.499,ns,1.565,ns,-0.525,ns
+56,Jaman North,Bono,-0.64,ns,-1.115,ns,1.431,ns,-1.254,ns
+57,Jaman South,Bono,-1.037,ns,-1.847,ns,1.362,ns,-1.699,ns
+58,Sunyani Municipal,Bono,-0.596,ns,-1.857,ns,2.421,hotspot,-1.025,ns
+59,Sunyani West Municipal,Bono,-0.54,ns,-1.758,ns,2.366,hotspot,-1.019,ns
+60,Tain,Bono,-0.526,ns,-0.497,ns,3.823,hotspot,-0.987,ns
+61,Wenchi Municipal,Bono,-0.452,ns,-0.494,ns,3.744,hotspot,-1.022,ns
+62,Atebubu Amantin Municipal,Bono East,1.448,ns,1.11,ns,5.236,hotspot,3.781,hotspot
+63,Kintampo North Municipal,Bono East,-0.001,ns,0.536,ns,4.857,hotspot,0.159,ns
+64,Kintampo South,Bono East,-0.079,ns,0.496,ns,4.939,hotspot,0.237,ns
+65,Nkoranza North,Bono East,0.359,ns,0.458,ns,5.61,hotspot,0.848,ns
+66,Nkoranza South Municipal,Bono East,0.33,ns,-0.329,ns,3.307,hotspot,1.084,ns
+67,Pru East,Bono East,2.029,hotspot,2.614,hotspot,6.03,hotspot,4.049,hotspot
+68,Pru West,Bono East,0.789,ns,1.41,ns,5.765,hotspot,1.666,ns
+69,Sene East,Bono East,2.438,hotspot,3.197,hotspot,3.518,hotspot,3.932,hotspot
+70,Sene West,Bono East,2.39,hotspot,2.599,hotspot,5.69,hotspot,4.882,hotspot
+71,Techiman Municipal,Bono East,-0.499,ns,-0.962,ns,3.907,hotspot,-0.556,ns
+72,Techiman North,Bono East,-0.258,ns,-0.003,ns,4.507,hotspot,-0.456,ns
+73,Abura Asebu Kwamankese,Central,0.435,ns,-0.69,ns,-1.136,ns,1.143,ns
+74,Agona East,Central,0.291,ns,-0.493,ns,-1.216,ns,1.411,ns
+75,Agona West Municipal,Central,-0.247,ns,-0.645,ns,-1.029,ns,-0.907,ns
+76,Ajumako Enyan Essiam,Central,0.817,ns,-0.321,ns,-0.737,ns,2.063,hotspot
+77,Asikuma Odoben Brakwa,Central,0.527,ns,-0.705,ns,-0.099,ns,2.035,hotspot
+78,Assin Central Municipal,Central,0.402,ns,-0.784,ns,0.214,ns,1.713,ns
+79,Assin North,Central,0.555,ns,-0.759,ns,-0.009,ns,2.156,hotspot
+80,Assin South,Central,0.506,ns,-0.781,ns,-0.123,ns,1.833,ns
+81,Awutu Senya West,Central,-0.161,ns,-1.105,ns,-1.738,ns,1.012,ns
+82,Awutu Senya East Municipal,Central,-0.362,ns,-1.267,ns,-2.102,coldspot,0.535,ns
+83,Cape Cape Metropolitan Area (CCMA)-Cape Coast South & Cape Coast North,Central,0.176,ns,-0.724,ns,-1.475,ns,0.178,ns
+84,Effutu Municipal,Central,-0.142,ns,-0.969,ns,-1.86,ns,0.438,ns
+85,Ekumfi,Central,0.795,ns,0.045,ns,-0.989,ns,1.552,ns
+86,Gomoa Central,Central,0.143,ns,-0.753,ns,-1.82,ns,1.172,ns
+87,Gomoa East,Central,0.112,ns,-0.815,ns,-1.857,ns,1.153,ns
+88,Gomoa West,Central,0.658,ns,-0.347,ns,-0.952,ns,1.969,hotspot
+89,Komenda Edina Eguafo Abirem Municipal,Central,-0.129,ns,-0.527,ns,-0.975,ns,-0.79,ns
+90,Mfantsiman Municipal,Central,0.704,ns,-0.072,ns,-1.005,ns,1.324,ns
+91,Twifo Ati Morkwa,Central,-0.056,ns,-0.613,ns,-0.023,ns,-0.43,ns
+92,Twifo Heman Lower Denkyira,Central,0.211,ns,-0.777,ns,-0.88,ns,0.408,ns
+93,Upper Denkyira East Municipal,Central,0.126,ns,-0.351,ns,-0.098,ns,0.447,ns
+94,Upper Denkyira West,Central,-0.251,ns,-0.534,ns,-0.318,ns,0.432,ns
+95,Abuakwa North Municipal,Eastern,-2.85,coldspot,-2.474,coldspot,-0.713,ns,-2.223,coldspot
+96,Abuakwa South Municipal,Eastern,-3.209,coldspot,-2.656,coldspot,-0.605,ns,-2.27,coldspot
+97,Achiase,Eastern,-1.369,ns,-0.83,ns,-0.008,ns,-0.671,ns
+98,Akwapim North Municipal,Eastern,-2.82,coldspot,-2.316,coldspot,-0.66,ns,-2.041,coldspot
+99,Akwapim South Municipal,Eastern,-2.118,coldspot,-1.309,ns,0.706,ns,-0.913,ns
+100,Akyemansa,Eastern,-2.762,coldspot,-2.225,coldspot,0.035,ns,-1.799,ns
+101,Asene Manso Akroso,Eastern,-2.791,coldspot,-1.954,ns,-0.127,ns,-1.635,ns
+102,Asuogyaman,Eastern,-2.607,coldspot,-1.626,ns,0.441,ns,-1.423,ns
+103,Atiwa East,Eastern,-2.93,coldspot,-2.404,coldspot,0.444,ns,-1.673,ns
+104,Atiwa West,Eastern,-3.166,coldspot,-2.462,coldspot,-0.052,ns,-1.993,coldspot
+105,Ayensuano,Eastern,-3.078,coldspot,-2.259,coldspot,-0.665,ns,-2.048,coldspot
+106,Birim Central Municipal,Eastern,-2.265,coldspot,-1.802,ns,0.15,ns,-1.398,ns
+107,Birim North,Eastern,-2.388,coldspot,-2.026,coldspot,0.252,ns,-1.487,ns
+108,Birim South,Eastern,-2.2,coldspot,-1.597,ns,0.182,ns,-1.229,ns
+109,Denkyembuor,Eastern,-3.126,coldspot,-2.421,coldspot,0.021,ns,-1.957,ns
+110,Fanteakwa North,Eastern,-2.388,coldspot,-1.65,ns,1.192,ns,-0.85,ns
+111,Fanteakwa South,Eastern,-3.303,coldspot,-2.589,coldspot,0.257,ns,-1.973,coldspot
+112,Kwaebibirem Municipal,Eastern,-2.706,coldspot,-2.179,coldspot,0.256,ns,-1.624,ns
+113,Kwahu Afram Plains North,Eastern,-1.949,ns,-1.043,ns,1.277,ns,-0.446,ns
+114,Kwahu Afram Plains South,Eastern,-2.645,coldspot,-1.561,ns,1.246,ns,-0.94,ns
+115,Kwahu East,Eastern,-1.7,ns,-1.234,ns,0.79,ns,-0.64,ns
+116,Kwahu South Municipal,Eastern,-1.991,coldspot,-0.933,ns,0.72,ns,-1.016,ns
+117,Kwahu West Municipal,Eastern,-2.157,coldspot,-1.809,ns,0.429,ns,-1.205,ns
+118,Lower Manya Krobo Municipal,Eastern,-2.342,coldspot,-1.688,ns,0.19,ns,-1.483,ns
+119,New Juaben North Municipal,Eastern,-3.214,coldspot,-2.884,coldspot,-1.05,ns,-2.655,coldspot
+120,New Juaben South Municipal,Eastern,-3.266,coldspot,-2.876,coldspot,-0.932,ns,-2.587,coldspot
+121,Nsawam Adoagyiri Municipal,Eastern,-1.641,ns,-0.963,ns,-0.218,ns,-0.804,ns
+122,Okere,Eastern,-2.655,coldspot,-2.273,coldspot,-0.691,ns,-2.055,coldspot
+123,Suhum Municipal,Eastern,-3.136,coldspot,-2.679,coldspot,-1.027,ns,-2.457,coldspot
+124,Upper Manya Krobo,Eastern,-3.429,coldspot,-2.265,coldspot,0.827,ns,-1.725,ns
+125,Upper West Akim,Eastern,-2.182,coldspot,-1.389,ns,-0.158,ns,-1.154,ns
+126,West Akim Municipal,Eastern,-2.529,coldspot,-1.719,ns,0.093,ns,-1.314,ns
+127,Yilo Krobo Municipal,Eastern,-3.666,coldspot,-3.059,coldspot,-0.415,ns,-2.615,coldspot
+128,Ablekuma Central Municipal,Greater Accra,-2.877,coldspot,-2.794,coldspot,-3.287,coldspot,-2.36,coldspot
+129,Ablekuma North Municipal,Greater Accra,-3.732,coldspot,-3.82,coldspot,-3.825,coldspot,-2.797,coldspot
+130,Ablekuma West Municipal,Greater Accra,-2.495,coldspot,-2.481,coldspot,-2.919,coldspot,-2.031,coldspot
+131,"Accra Metropolitan Area (AMA)-Ablekuma South, Ashiedu Keteke & Okaikoi South",Greater Accra,-2.877,coldspot,-2.794,coldspot,-3.287,coldspot,-2.36,coldspot
+132,Ada East,Greater Accra,-0.246,ns,0.829,ns,-0.161,ns,0.333,ns
+133,Ada West,Greater Accra,-0.42,ns,0.366,ns,-0.367,ns,0.488,ns
+134,Adentan Municipal,Greater Accra,-2.075,coldspot,-2.208,coldspot,-1.653,ns,-1.44,ns
+135,Ashaiman Municipal,Greater Accra,-1.944,ns,-2.189,coldspot,-2.074,coldspot,-1.426,ns
+136,Ayawaso Central Municipal,Greater Accra,-3.367,coldspot,-3.252,coldspot,-3.032,coldspot,-2.571,coldspot
+137,Ayawaso East Municipal,Greater Accra,-3.097,coldspot,-2.841,coldspot,-2.873,coldspot,-2.461,coldspot
+138,Ayawaso North Municipal,Greater Accra,-3.12,coldspot,-2.899,coldspot,-2.902,coldspot,-2.484,coldspot
+139,Ayawaso West Municipal,Greater Accra,-3.952,coldspot,-3.833,coldspot,-3.428,coldspot,-3.026,coldspot
+140,Ga Central Municipal,Greater Accra,-1.662,ns,-2.321,coldspot,-2.202,coldspot,-0.636,ns
+141,Ga East Municipal,Greater Accra,-2.444,coldspot,-2.672,coldspot,-2.12,coldspot,-1.653,ns
+142,Ga North Municipal,Greater Accra,-2.384,coldspot,-2.63,coldspot,-2.125,coldspot,-1.61,ns
+143,Ga South Municipal,Greater Accra,-2.234,coldspot,-2.452,coldspot,-2.179,coldspot,-1.469,ns
+144,Ga West Municipal,Greater Accra,-2.255,coldspot,-2.527,coldspot,-2.125,coldspot,-1.489,ns
+145,Korle Klottey Municipal,Greater Accra,-3.492,coldspot,-3.259,coldspot,-3.8,coldspot,-2.878,coldspot
+146,Kpone Katamanso Municipal,Greater Accra,-2.541,coldspot,-2.749,coldspot,-2.452,coldspot,-1.593,ns
+147,Krowor Municipal,Greater Accra,-2.149,coldspot,-2.209,coldspot,-1.846,ns,-1.559,ns
+148,La Dade-Kotopon Municipal,Greater Accra,-3.357,coldspot,-3.084,coldspot,-3.192,coldspot,-2.705,coldspot
+149,La Nkwantanang Madina Municipal,Greater Accra,-2.056,coldspot,-2.169,coldspot,-1.762,ns,-1.467,ns
+150,Ledzokuku Municipal,Greater Accra,-2.737,coldspot,-2.681,coldspot,-2.426,coldspot,-2.09,coldspot
+151,Ningo-Prampram,Greater Accra,-0.684,ns,-0.683,ns,-0.889,ns,0.35,ns
+152,Okaikoi North Municipal,Greater Accra,-3.357,coldspot,-3.587,coldspot,-2.99,coldspot,-2.311,coldspot
+153,Shai-Osudoku,Greater Accra,-0.644,ns,-0.362,ns,-0.739,ns,0.288,ns
+154,Tema Metropolitan Area (TMA)-Tema Central & Tema East,Greater Accra,-1.944,ns,-2.189,coldspot,-2.074,coldspot,-1.426,ns
+155,Tema West Municipal,Greater Accra,-2.308,coldspot,-2.536,coldspot,-2.332,coldspot,-1.677,ns
+156,Weija Gbawe Municipal,Greater Accra,-3.676,coldspot,-3.786,coldspot,-3.786,coldspot,-2.733,coldspot
+157,Bunkpurugu Nakpanduri,North East,5.047,hotspot,3.734,hotspot,-2.059,coldspot,1.988,hotspot
+158,Chereponi,North East,5.672,hotspot,3.716,hotspot,-0.514,ns,3.267,hotspot
+159,East Mamprusi Municipal,North East,6.352,hotspot,5.435,hotspot,-3.268,coldspot,1.61,ns
+160,Mamprugu Moagduri,North East,2.447,hotspot,2.925,hotspot,-1.181,ns,0.451,ns
+161,West Mamprusi Municipal,North East,4.544,hotspot,4.184,hotspot,-2.833,coldspot,1.088,ns
+162,Yunyoo Nasuan,North East,5.706,hotspot,4.063,hotspot,-1.839,ns,2.573,hotspot
+163,Gushegu Municipal,Northern,7.507,hotspot,5.083,hotspot,-0.084,ns,4.239,hotspot
+164,Karaga,Northern,6.76,hotspot,4.717,hotspot,0.742,ns,3.571,hotspot
+165,Kpandai,Northern,4.085,hotspot,4.271,hotspot,3.838,hotspot,5.19,hotspot
+166,Kumbungu,Northern,4.639,hotspot,3.684,hotspot,2.499,hotspot,2.85,hotspot
+167,Mion,Northern,7.436,hotspot,5.826,hotspot,5.211,hotspot,6.009,hotspot
+168,Nanton,Northern,6.853,hotspot,5.205,hotspot,3.646,hotspot,3.722,hotspot
+169,Nanumba North Municipal,Northern,5.371,hotspot,4.439,hotspot,4.936,hotspot,5.602,hotspot
+170,Nanumba South,Northern,5.908,hotspot,5.058,hotspot,5.473,hotspot,6.691,hotspot
+171,Saboba,Northern,7.147,hotspot,5.039,hotspot,3.647,hotspot,5.038,hotspot
+172,Sagnarigu Municipal,Northern,4.058,hotspot,3.257,hotspot,2.359,hotspot,2.204,hotspot
+173,Savelugu Municipal,Northern,4.604,hotspot,3.621,hotspot,2.476,hotspot,2.622,hotspot
+174,Tamale Metropolitan Area (TMA)-Tamale Central & Tamale South,Northern,4.215,hotspot,3.325,hotspot,2.293,hotspot,2.168,hotspot
+175,Tatale Sanguli,Northern,4.956,hotspot,3.707,hotspot,3.554,hotspot,3.758,hotspot
+176,Tolon,Northern,5.304,hotspot,4.531,hotspot,3.743,hotspot,3.246,hotspot
+177,Yendi Municipal,Northern,6.276,hotspot,4.647,hotspot,4.495,hotspot,4.681,hotspot
+178,Zabzugu,Northern,5.0,hotspot,3.698,hotspot,3.58,hotspot,3.741,hotspot
+179,Biakoye,Oti,-0.546,ns,1.201,ns,-1.006,ns,-1.308,ns
+180,Guan,Oti,-0.912,ns,0.599,ns,-1.47,ns,-1.578,ns
+181,Jasikan Municipal,Oti,-0.809,ns,0.654,ns,-1.394,ns,-1.551,ns
+182,Kadjebi,Oti,0.224,ns,1.586,ns,-1.861,ns,-0.824,ns
+183,Krachi East Municipal,Oti,1.369,ns,2.555,hotspot,0.535,ns,0.796,ns
+184,Krachi Nchumuru,Oti,3.05,hotspot,3.799,hotspot,3.271,hotspot,3.753,hotspot
+185,Krachi West Municipal,Oti,1.418,ns,2.187,hotspot,1.439,ns,1.245,ns
+186,Nkwanta North (Kpassa),Oti,3.413,hotspot,3.261,hotspot,2.507,hotspot,3.574,hotspot
+187,Nkwanta South Municipal,Oti,2.407,hotspot,3.117,hotspot,1.117,ns,2.133,hotspot
+188,Bole,Savannah,0.947,ns,1.911,ns,4.409,hotspot,1.522,ns
+189,Central Gonja,Savannah,3.119,hotspot,3.691,hotspot,5.129,hotspot,4.57,hotspot
+190,East Gonja Municipal,Savannah,2.365,hotspot,2.99,hotspot,5.49,hotspot,4.572,hotspot
+191,North East Gonja,Savannah,4.755,hotspot,4.685,hotspot,6.851,hotspot,6.263,hotspot
+192,North Gonja,Savannah,4.746,hotspot,4.717,hotspot,6.798,hotspot,6.172,hotspot
+193,Sawla Tuna Kalba,Savannah,0.97,ns,2.381,hotspot,2.421,hotspot,0.913,ns
+194,West Gonja,Savannah,3.04,hotspot,3.298,hotspot,2.769,hotspot,3.103,hotspot
+195,Bawku Municipal,Upper East,2.661,hotspot,4.433,hotspot,-2.222,coldspot,-1.334,ns
+196,Bawku West,Upper East,3.277,hotspot,4.833,hotspot,-4.423,coldspot,-1.264,ns
+197,Binduri,Upper East,2.316,hotspot,3.926,hotspot,-2.364,coldspot,-1.272,ns
+198,Bolgatanga East,Upper East,1.301,ns,3.638,hotspot,-4.191,coldspot,-1.992,coldspot
+199,Bolgatanga Municipal,Upper East,1.357,ns,3.63,hotspot,-4.465,coldspot,-2.071,coldspot
+200,Bongo,Upper East,1.157,ns,4.071,hotspot,-4.946,coldspot,-2.698,coldspot
+201,Builsa North Municipal,Upper East,1.011,ns,3.314,hotspot,-3.547,coldspot,-2.107,coldspot
+202,Builsa South,Upper East,2.304,hotspot,3.927,hotspot,-3.786,coldspot,-1.2,ns
+203,Garu,Upper East,4.587,hotspot,5.144,hotspot,-4.053,coldspot,-0.227,ns
+204,Kasena Nankana Municipal,Upper East,1.097,ns,3.541,hotspot,-3.54,coldspot,-2.263,coldspot
+205,Kasena Nankana West,Upper East,1.203,ns,3.654,hotspot,-3.298,coldspot,-2.149,coldspot
+206,Nabdam,Upper East,1.7,ns,4.383,hotspot,-4.804,coldspot,-2.37,coldspot
+207,Pusiga,Upper East,1.975,hotspot,3.316,hotspot,-1.462,ns,-1.081,ns
+208,Talensi,Upper East,3.089,hotspot,4.464,hotspot,-5.28,coldspot,-1.432,ns
+209,Tempane,Upper East,2.398,hotspot,3.905,hotspot,-1.873,ns,-1.146,ns
+210,Daffiama Bussie Issa,Upper West,0.459,ns,3.09,hotspot,-0.878,ns,-2.106,coldspot
+211,Jirapa Municipal,Upper West,0.368,ns,2.902,hotspot,-1.063,ns,-2.189,coldspot
+212,Lambussie Karni,Upper West,0.264,ns,2.46,hotspot,-1.203,ns,-2.236,coldspot
+213,Lawra Municipal,Upper West,0.124,ns,2.12,hotspot,-1.246,ns,-2.153,coldspot
+214,Nadowli Kaleo,Upper West,0.488,ns,3.043,hotspot,-0.855,ns,-1.836,ns
+215,Nandom,Upper West,0.014,ns,1.715,ns,-0.932,ns,-1.869,ns
+216,Sissala East Municipal,Upper West,1.509,ns,3.751,hotspot,-2.28,coldspot,-1.411,ns
+217,Sissala West,Upper West,0.516,ns,2.693,hotspot,-0.716,ns,-1.819,ns
+218,Wa East,Upper West,0.581,ns,2.775,hotspot,-0.36,ns,-1.2,ns
+219,Wa Municipal,Upper West,0.284,ns,2.342,hotspot,-0.669,ns,-1.506,ns
+220,Wa West,Upper West,0.663,ns,2.852,hotspot,0.146,ns,-0.81,ns
+221,Adaklu,Volta,-0.962,ns,0.429,ns,0.661,ns,-1.075,ns
+222,Afadzato South,Volta,-0.935,ns,0.456,ns,-1.815,ns,-1.664,ns
+223,Agortime-Ziope,Volta,-1.045,ns,0.384,ns,0.663,ns,-1.14,ns
+224,Akatsi North,Volta,-0.768,ns,0.758,ns,0.656,ns,-1.004,ns
+225,Akatsi South Municipal,Volta,-1.235,ns,0.261,ns,-1.635,ns,-1.81,ns
+226,Anloga,Volta,-0.563,ns,0.843,ns,-0.357,ns,-0.632,ns
+227,Central Tongu,Volta,-0.921,ns,0.785,ns,0.745,ns,-0.963,ns
+228,Ho Municipal,Volta,-1.34,ns,-0.069,ns,0.612,ns,-1.393,ns
+229,Ho West,Volta,-1.182,ns,0.214,ns,0.403,ns,-1.268,ns
+230,Hohoe Municipal,Volta,-0.972,ns,0.347,ns,-1.889,ns,-1.788,ns
+231,Keta Municipal,Volta,-0.515,ns,1.193,ns,-0.446,ns,-1.258,ns
+232,Ketu North Municipal,Volta,-0.459,ns,1.064,ns,-0.191,ns,-1.178,ns
+233,Ketu South Municipal,Volta,-0.356,ns,0.886,ns,-0.458,ns,-1.186,ns
+234,Kpando Municipal,Volta,-1.237,ns,0.211,ns,-0.607,ns,-1.791,ns
+235,North Dayi,Volta,-1.217,ns,-0.173,ns,-0.125,ns,-1.514,ns
+236,North Tongu,Volta,-0.592,ns,0.625,ns,0.193,ns,-0.063,ns
+237,South Dayi,Volta,-1.257,ns,-0.147,ns,0.173,ns,-1.326,ns
+238,South Tongu,Volta,-0.473,ns,1.166,ns,-0.075,ns,-0.229,ns
+239,Ahanta West Municipal,Western,-1.154,ns,-0.634,ns,-1.132,ns,-3.289,coldspot
+240,Effia Kwesimintsim Municipal,Western,-1.17,ns,-0.752,ns,-1.305,ns,-3.042,coldspot
+241,Ellembelle,Western,-0.822,ns,-0.163,ns,0.422,ns,-2.532,coldspot
+242,Jomoro Municipal,Western,-1.121,ns,-0.223,ns,0.655,ns,-2.039,coldspot
+243,Mpohor,Western,-1.183,ns,-0.687,ns,-1.06,ns,-3.294,coldspot
+244,Nzema East Municipal,Western,-0.718,ns,-0.121,ns,-0.273,ns,-2.861,coldspot
+245,Prestea/Huni Valley Municipal,Western,-0.339,ns,0.045,ns,0.219,ns,-1.847,ns
+246,"Sekondi Takoradi Metropolitan Area (STMA)- Takoradi, Sekondi & Essikado-Ketan",Western,-1.199,ns,-0.745,ns,-1.337,ns,-3.256,coldspot
+247,Shama,Western,-0.655,ns,-0.611,ns,-1.067,ns,-2.154,coldspot
+248,Tarkwa-Nsuaem Municipal,Western,-0.472,ns,-0.1,ns,0.143,ns,-1.95,ns
+249,Wassa Amenfi Central,Western,-0.478,ns,-0.54,ns,-0.276,ns,-0.983,ns
+250,Wassa Amenfi East Municipal,Western,-0.486,ns,-0.534,ns,-0.5,ns,-1.108,ns
+251,Wassa Amenfi West Municipal,Western,-1.392,ns,-0.361,ns,0.675,ns,-1.954,ns
+252,Wassa East,Western,-0.366,ns,-0.464,ns,-0.618,ns,-1.588,ns
+253,Aowin Municipal,Western North,-1.625,ns,0.046,ns,1.266,ns,-0.942,ns
+254,Bia East,Western North,-0.954,ns,-1.421,ns,1.514,ns,-0.046,ns
+255,Bia West,Western North,-1.152,ns,-0.703,ns,1.03,ns,0.446,ns
+256,Bibiani Anhwiaso Bekwai Municipal,Western North,-0.733,ns,-0.584,ns,0.083,ns,-0.069,ns
+257,Bodi,Western North,-1.812,ns,0.183,ns,1.522,ns,0.406,ns
+258,Juaboso,Western North,-1.841,ns,0.096,ns,1.378,ns,0.313,ns
+259,Sefwi Akontombra,Western North,-1.805,ns,0.263,ns,1.619,ns,0.26,ns
+260,Sefwi Wiawso Municipal,Western North,-1.402,ns,-0.777,ns,1.204,ns,-0.065,ns
+261,Suaman,Western North,-1.824,ns,0.352,ns,1.65,ns,0.398,ns

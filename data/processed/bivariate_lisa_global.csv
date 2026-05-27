@@ -1,0 +1,7 @@
+pair,global_biv_I,HH,LL,HL,LH
+stunting_x_anaemia,0.7822,49,47,6,0
+stunting_x_iycf,0.2973,25,11,12,6
+stunting_x_diarrhoea,0.6319,32,21,1,0
+anaemia_x_iycf,0.18,26,10,13,6
+anaemia_x_diarrhoea,0.3384,25,18,4,10
+iycf_x_diarrhoea,0.4982,32,18,2,2

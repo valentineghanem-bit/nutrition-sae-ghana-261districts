@@ -1,0 +1,10 @@
+ADJACENCY REPORT - Ghana 261 districts
+Polygon queen edges (260)   : 668
+District queen edges        : 636
+Mean neighbours (queen)     : 4.87
+Min / max neighbours        : 1 / 10
+Isolates after patching     : 0
+Component bridges added     : 1
+Districts matched to polygon: 261/261
+KNN(5) edges                : 804
+Graph connected (queen)     : True

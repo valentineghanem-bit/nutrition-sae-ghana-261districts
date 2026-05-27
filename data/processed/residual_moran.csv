@@ -1,0 +1,5 @@
+outcome,posterior_moran_I,posterior_p,within_region_residual_I,within_region_residual_z,within_region_residual_p
+stunting,0.9366,0.002,0.3545,8.857,0.002
+anaemia,0.9587,0.002,0.398,9.762,0.002
+iycf,0.836,0.002,0.4044,9.728,0.002
+diarrhoea,0.821,0.002,0.4296,10.417,0.002

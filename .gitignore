@@ -1,0 +1,108 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Word lock / temp files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.bak
+
+# Workspace preview / clip artefacts (generated during local QA)
+**/_preview_*.png
+**/_clip_*.png
+**/_dash_*.png
+
+# Build / temp working files
+/tmp/
+*.tmp
+
+# Local secrets — never commit
+.env.local
+github.env
+*.pem
+*.key
+
+# Per /github-publish protocol — never upload these to GitHub
+*.docx
+*.pdf
+*.tex
+*_draft.*
+*_raw.*
+*_identifiable.*
+~$*
+
+# Exception: the residual-Moran's-I CSV is small and reproducible
+!data/processed/*.csv
+
+# AIPOCH working / phase documents (internal — never push)
+Phase*_*.md
+Phase*.mermaid
+QA_Audit_Report*.md
+PUSH_HANDOFF.md
+AIPOCH_Learning_Log*.md
+QA_CONDITIONAL_*.txt
+
+# Manuscript directory (Tenet 20 — NEVER commit)
+manuscript/
+
+# PowerShell publish script (bash push_to_github.sh is canonical)
+publish.ps1
+
+# Additional preview artefacts
+**/_pv*.png
+

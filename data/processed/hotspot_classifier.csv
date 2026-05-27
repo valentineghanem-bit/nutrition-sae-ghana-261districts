@@ -1,0 +1,5 @@
+outcome,hotspot_prevalence,n_hotspots,AUC_PR,AUC_ROC,Brier
+stunting,0.119,31,0.773,0.957,0.071
+anaemia,0.23,60,0.947,0.984,0.059
+iycf,0.142,37,0.417,0.859,0.128
+diarrhoea,0.195,51,0.476,0.689,0.149

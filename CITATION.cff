@@ -1,0 +1,61 @@
+cff-version: 1.2.0
+message: "If you use this software or its outputs, please cite the work as below."
+title: "Small-area estimation of childhood stunting, anaemia, infant-feeding inadequacy and diarrhoea across the 261 districts of Ghana: a Bayesian spatial and machine-learning analysis of the 2022 Demographic and Health Survey"
+type: software
+authors:
+  - family-names: "Ghanem"
+    given-names: "Valentine Golden"
+    affiliation: "Ghana COCOBOD Cocoa Clinic, Accra, Ghana"
+    email: "valentineghanem@gmail.com"
+    orcid: "https://orcid.org/0009-0002-8332-0220"
+date-released: 2026-05-26
+version: "1.0.0"
+url: "https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts"
+repository-code: "https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts"
+license: MIT
+keywords:
+  - small-area estimation
+  - Bayesian spatial epidemiology
+  - childhood stunting
+  - anaemia
+  - infant and young child feeding
+  - diarrhoea
+  - geographically weighted regression
+  - machine learning
+  - SHAP
+  - Ghana
+  - Demographic and Health Survey
+abstract: >-
+  Modelled district-level posterior estimates of childhood stunting,
+  anaemia, infant-feeding inadequacy and diarrhoea across all 261
+  districts of Ghana, produced by benchmarked Besag-York-Mollie (BYM2)
+  Bayesian small-area estimation from the 2022 Ghana Demographic and
+  Health Survey region direct estimates and the 2021 Population and
+  Housing Census district covariates. Spatial structure characterised
+  with Moran's I, LISA, bivariate LISA and Getis-Ord Gi*; spatial
+  non-stationarity with geographically weighted regression; determinant
+  importance with Random Forest and XGBoost interpreted by SHAP under
+  spatial leave-one-region-out cross-validation. Reporting follows
+  STROBE, RECORD-Spatial and TRIPOD+AI.
+references:
+  - type: report
+    title: "Ghana Demographic and Health Survey 2022"
+    authors:
+      - name: "Ghana Statistical Service, Ghana Health Service, and ICF"
+    year: 2024
+    publisher:
+      name: "GSS and ICF"
+    location:
+      name: "Accra and Rockville, MD"
+    notes: "Report FR387"
+    url: "https://dhsprogram.com/pubs/pdf/FR387/FR387.pdf"
+  - type: report
+    title: "2021 Population and Housing Census"
+    authors:
+      - name: "Ghana Statistical Service"
+    year: 2021
+    publisher:
+      name: "GSS"
+    location:
+      name: "Accra, Ghana"
+    url: "https://census2021.statsghana.gov.gh/"
