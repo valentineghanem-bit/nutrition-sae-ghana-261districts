@@ -1,3 +1,42 @@
+# ── Git LFS — binary / large artefacts ───────────────────────────────────────
 *.png filter=lfs diff=lfs merge=lfs -text
 *.geojson filter=lfs diff=lfs merge=lfs -text
 *.npy filter=lfs diff=lfs merge=lfs -text
+
+# ── Line endings — normalise to LF in the repo ────────────────────────────────
+* text=auto eol=lf
+
+# ── Source code — counted in GitHub language statistics ──────────────────────
+*.py    text diff=python linguist-detectable=true
+*.R     text diff=r      linguist-detectable=true linguist-language=R
+*.r     text diff=r      linguist-detectable=true linguist-language=R
+*.Rmd   text             linguist-detectable=true linguist-language=R
+*.ipynb text             linguist-detectable=true linguist-language=Jupyter
+*.js    text             linguist-detectable=true
+*.sh    text             linguist-detectable=true linguist-language=Shell
+
+# ── Generated HTML (build outputs — exclude from language stats) ──────────────
+# These files are outputs of build_dashboard.py / build_poster.py and contain
+# ~3-9 MB of inlined Plotly.js / CSS — they are not hand-written source code.
+dashboard/**           linguist-generated=true
+poster/**              linguist-generated=true
+**/*Dashboard*.html    linguist-generated=true
+**/*Poster*.html       linguist-generated=true
+
+# ── Data files — not source code ─────────────────────────────────────────────
+*.csv      linguist-detectable=false
+*.tsv      linguist-detectable=false
+*.json     linguist-detectable=false
+*.geojson  linguist-detectable=false
+*.txt      linguist-detectable=false
+
+# ── Binary artefacts ─────────────────────────────────────────────────────────
+*.png  binary
+*.jpg  binary
+*.svg  binary
+*.pdf  binary
+*.xlsx binary
+*.xls  binary
+*.pkl  binary
+*.npy  binary
+*.rds  binary
