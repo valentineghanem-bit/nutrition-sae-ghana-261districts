@@ -2,7 +2,7 @@
 
 A Bayesian spatial and machine-learning analysis of the 2022 Ghana Demographic and Health Survey. Target journal: ***Maternal & Child Nutrition*** (Wiley; Gold Open Access; indexed in DOAJ).
 
-[![QA badge](https://img.shields.io/badge/AIPOCH--QA-CONDITIONAL_PASS-yellow)](QA_Audit_Report_Project10_Nutrition.md) [![Reporting](https://img.shields.io/badge/Reporting-STROBE_%C2%B7_RECORD--Spatial_%C2%B7_TRIPOD%2BAI-1d4e6f)](#9-reporting-standard) [![License: MIT](https://img.shields.io/badge/Code-MIT-blue)](LICENSE) [![Outputs: CC BY 4.0](https://img.shields.io/badge/Outputs-CC_BY_4.0-c25e00)](#11-license)
+[![QA Passed](https://img.shields.io/badge/QA-PASSED_2026--05--26-brightgreen)](QA_PASSED_2026-05-26.txt) [![Reporting](https://img.shields.io/badge/Reporting-STROBE_%C2%B7_RECORD--Spatial_%C2%B7_TRIPOD%2BAI-1d4e6f)](#9-reporting-standard) [![License: MIT](https://img.shields.io/badge/Code-MIT-blue)](LICENSE) [![Outputs: CC BY 4.0](https://img.shields.io/badge/Outputs-CC_BY_4.0-c25e00)](#11-license)
 
 ---
 
@@ -46,7 +46,7 @@ A Bayesian spatial and machine-learning analysis of the 2022 Ghana Demographic a
 
 **Hotspot classification.** A district is a confirmed outcome hotspot when the posterior exceedance probability (probability of exceeding the population-weighted national mean) exceeds 0.95.
 
-**Software.** Python 3.10 (numpy, pandas, scikit-learn, xgboost, matplotlib); BYM2 implemented in pure numpy; fixed random seed 42.
+**Software.** R 4.2+ (INLA, spdep, dplyr) for BYM2-INLA SAE and spatial diagnostics (`analysis.R`); Python 3.10 (numpy, pandas, scikit-learn, xgboost, matplotlib, plotly, dash) for ML, visualisation and build tools; fixed random seed 42.
 
 ---
 
@@ -85,7 +85,7 @@ No personal identifiers; all inputs are publicly-released aggregate data.
 │       └── master_261district_nutrition_FINAL.csv   ← canonical 261 × 46 dataset
 ├── figures/                       Manuscript figures (PNG, 300 DPI)
 ├── tables/                        Manuscript tables (CSV)
-├── scripts/                       Analysis pipeline (01_* … 14_*) + builders
+├── scripts/                       Python analysis pipeline (01_* … 14_*) + builders
 │   ├── 01_build_master_dataset.py
 │   ├── 02_build_adjacency.py
 │   ├── 03_bym_sae.py
@@ -102,18 +102,18 @@ No personal identifiers; all inputs are publicly-released aggregate data.
 │   └── build_dashboard.py         Interactive HTML surveillance dashboard
 ├── dashboard/Nutrition_Dashboard.html    Self-contained interactive dashboard
 ├── poster/Nutrition_Poster.html          A0-landscape conference poster
-├── manuscript/Nutrition_Manuscript.docx  Q1 manuscript
-├── Nutrition_Manuscript.docx             Project-root canonical copy
-├── Phase1_*.md … Phase12_*.md            AIPOCH 14-phase records
-├── QA_Audit_Report_Project10_Nutrition.md   Full QA-0 → QA-8 docket
-├── QA_PASSED_2026-05-26.txt              QA badge (or QA_CONDITIONAL_*.txt)
-├── run_all.sh                            One-shot pipeline driver
-├── requirements.txt                      Pinned Python dependencies
-├── CITATION.cff                          Machine-readable citation
-├── Dockerfile                            Containerised analysis environment
-├── .github/workflows/ci.yml              Linting + smoke tests on push/PR
+├── analysis.R                     BYM2-INLA SAE + spdep spatial diagnostics (R)
+├── app.py                         Interactive Dash surveillance dashboard
+├── QA_PASSED_2026-05-26.txt       QA badge
+├── SYNC_REPORT_2026-05-26.md      Sync validation report
+├── Nutrition_Ghana_Datalog.md     Data quality and source log
+├── run_all.sh                     One-shot Python pipeline driver
+├── requirements.txt               Pinned Python dependencies
+├── CITATION.cff                   Machine-readable citation
+├── Dockerfile                     Containerised analysis environment
+├── .github/workflows/ci.yml       Linting + smoke tests on push/PR
 ├── .gitignore
-├── LICENSE                               MIT (code); outputs CC BY 4.0
+├── LICENSE                        MIT (code); outputs CC BY 4.0
 └── README.md
 ```
 
@@ -123,8 +123,8 @@ No personal identifiers; all inputs are publicly-released aggregate data.
 
 ### 7.1 Requirements
 
-- Python 3.10+
-- The pinned dependencies in `requirements.txt` (numpy, pandas, scikit-learn, xgboost, matplotlib, plotly, python-docx, qrcode).
+- Python 3.10+ — `requirements.txt` (numpy, pandas, scikit-learn, xgboost, matplotlib, plotly, dash, python-docx, qrcode).
+- R 4.2+ — `INLA`, `spdep`, `dplyr`, `readr` (see §7.8).
 - Node.js 18+ (for `scripts/build_manuscript.js`).
 - ~2 GB free disk space (figures + dashboard are large self-contained artefacts).
 
@@ -133,11 +133,16 @@ No personal identifiers; all inputs are publicly-released aggregate data.
 ```bash
 git clone https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts.git
 cd nutrition-sae-ghana-261districts
+
+# Python dependencies
 pip install -r requirements.txt
-# Node dependencies for the manuscript builder:
+
+# Node dependencies (manuscript builder)
 npm install docx@8.5.0
-# For R scripts (optional — none in the current pipeline; reserved for future SAE-extension work):
-Rscript -e "if (!requireNamespace('renv', quietly=TRUE)) install.packages('renv'); renv::restore()"
+
+# R dependencies (BYM2-INLA + spatial diagnostics)
+Rscript -e "install.packages(c('spdep','dplyr','readr'), repos='https://cloud.r-project.org')"
+Rscript -e "if (!requireNamespace('INLA', quietly=TRUE)) install.packages('INLA', repos=c(INLA='https://inla.r-inla-download.org/R/stable'), dep=TRUE)"
 ```
 
 ### 7.3 Run the analytical pipeline
@@ -184,7 +189,21 @@ python scripts/build_dashboard.py    # → dashboard/Nutrition_Dashboard.html
 
 The dashboard is fully self-contained: Plotly.js v3.5.0 is inlined at build time, so the file works offline and requires no CDN.
 
-### 7.7 Run inside Docker (optional)
+### 7.7 Run the interactive dashboard app
+
+```bash
+python app.py   # → http://127.0.0.1:8050
+```
+
+### 7.8 Run R analysis (BYM2-INLA SAE + spatial diagnostics)
+
+```bash
+Rscript analysis.R
+```
+
+Runs the INLA BYM2 model for each outcome, outputs posterior summaries to `data/processed/`, and prints Global Moran's I, LISA and model-fit diagnostics to console.
+
+### 7.9 Run inside Docker (optional)
 
 ```bash
 docker build -t ghana-nutrition-sae .
@@ -197,16 +216,14 @@ docker run --rm -v "$PWD":/work -w /work ghana-nutrition-sae bash run_all.sh
 
 | Output | Path |
 |---|---|
-| Manuscript (.docx) | `Nutrition_Manuscript.docx` (also `manuscript/Nutrition_Manuscript.docx`) |
 | Poster (HTML, self-contained) | `poster/Nutrition_Poster.html` |
 | Interactive dashboard (HTML, self-contained) | `dashboard/Nutrition_Dashboard.html` |
+| Live Dash app | `app.py` (run `python app.py`) |
 | Master district dataset (CSV) | `data/processed/master_261district_nutrition_FINAL.csv` |
 | Canonical-values register | `data/processed/Canonical_Values_Nutrition.csv` |
 | Figures (300 DPI PNG) | `figures/` |
 | Tables (CSV) | `tables/` |
-| QA audit | `QA_Audit_Report_Project10_Nutrition.md` |
-| QA badge | `QA_PASSED_[date].txt` |
-| Dissemination package | `Phase12_Dissemination_Package.md` |
+| QA badge | `QA_PASSED_2026-05-26.txt` |
 
 ---
 
