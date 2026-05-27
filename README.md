@@ -1,6 +1,6 @@
 # Small-area estimation of childhood stunting, anaemia, infant-feeding inadequacy and diarrhoea across the 261 districts of Ghana
 
-A Bayesian spatial and machine-learning analysis of the 2022 Ghana Demographic and Health Survey. Target journal: ***Maternal & Child Nutrition*** (Wiley; Gold Open Access; indexed in DOAJ).
+A Bayesian spatial and machine-learning analysis of the 2022 Ghana Demographic and Health Survey. 
 
 [![QA Passed](https://img.shields.io/badge/QA-PASSED_2026--05--26-brightgreen)](QA_PASSED_2026-05-26.txt) [![Reporting](https://img.shields.io/badge/Reporting-STROBE_%C2%B7_RECORD--Spatial_%C2%B7_TRIPOD%2BAI-1d4e6f)](#9-reporting-standard) [![License: MIT](https://img.shields.io/badge/Code-MIT-blue)](LICENSE) [![Outputs: CC BY 4.0](https://img.shields.io/badge/Outputs-CC_BY_4.0-c25e00)](#11-license)
 
