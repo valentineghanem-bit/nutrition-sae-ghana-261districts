@@ -1,8 +1,7 @@
 # Small-area estimation of childhood stunting, anaemia, infant-feeding inadequacy and diarrhoea across the 261 districts of Ghana
 
-A Bayesian spatial and machine-learning analysis of the 2022 Ghana Demographic and Health Survey. 
 
-[![QA Passed](https://img.shields.io/badge/QA-PASSED_2026--05--26-brightgreen)](QA_PASSED_2026-05-26.txt) [![Reporting](https://img.shields.io/badge/Reporting-STROBE_%C2%B7_RECORD--Spatial_%C2%B7_TRIPOD%2BAI-1d4e6f)](#9-reporting-standard) [![License: MIT](https://img.shields.io/badge/Code-MIT-blue)](LICENSE) [![Outputs: CC BY 4.0](https://img.shields.io/badge/Outputs-CC_BY_4.0-c25e00)](#11-license)
+[![CI](https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts/actions/workflows/ci.yml/badge.svg)](https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts/actions) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/) [![R 4.3+](https://img.shields.io/badge/R-4.3+-blue.svg)](https://www.r-project.org/) [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--8332--0220-green.svg)](https://orcid.org/0009-0002-8332-0220)
 
 ---
 
