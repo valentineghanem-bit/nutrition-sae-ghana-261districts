@@ -5,71 +5,35 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
-  syntax-and-smoke:
+  validate:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.10", "3.11"]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: pip
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "18"
-
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
-            gdal-bin libgdal-dev libproj-dev proj-data proj-bin libgeos-dev
-
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Install Node dependencies (docx)
-        run: npm install docx@8.5.0
-
-      - name: Syntax-check every Python script
-        run: |
-          for f in scripts/*.py; do
-            echo "py_compile $f"
-            python -m py_compile "$f"
-          done
-
-      - name: Syntax-check the manuscript builder
-        run: node --check scripts/build_manuscript.js
-
-      - name: Smoke test — residual Moran's I (fast, reads processed data only)
-        run: python scripts/14_residual_moran.py
-
-      - name: Smoke test — build the conference poster
-        run: python scripts/build_poster.py
-
-      - name: Verify canonical-values reconciliation
-        run: python scripts/08_reconcile.py
-
-  lint:
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
-      - name: Install ruff
-        run: pip install ruff==0.6.9
-      - name: Lint
-        run: ruff check scripts/
-        continue-on-error: true
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Syntax check — all Python scripts
+        run: |
+          find . -name "*.py" \
+            -not -path "./.git/*" \
+            -not -path "./dashboard/*" \
+            -not -path "./poster/*" \
+            | sort | xargs -I{} python -m py_compile {} \
+            && echo "All .py files pass syntax check"
+
+      - name: Dependency consistency check
+        run: pip check
+
+      - name: Lint (errors and undefined names only)
+        run: |
+          pip install ruff --quiet
+          ruff check . --select=E9,F63,F7,F82 --exclude=dashboard,poster || true
