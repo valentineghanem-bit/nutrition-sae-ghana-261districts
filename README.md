@@ -1,118 +1,118 @@
-# Small-area estimation of childhood stunting, anaemia, infant-feeding inadequacy and diarrhoea across the 261 districts of Ghana
-
+# Small-area Estimation of Childhood Stunting, Anaemia, Infant-Feeding Inadequacy and Diarrhoea Across Ghana's 261 Districts
 
 [![CI](https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts/actions/workflows/ci.yml/badge.svg)](https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts/actions) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/) [![R 4.3+](https://img.shields.io/badge/R-4.3+-blue.svg)](https://www.r-project.org/) [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--8332--0220-green.svg)](https://orcid.org/0009-0002-8332-0220)
+
+**Author:** Valentine Golden Ghanem | Ghana COCOBOD Cocoa Clinic, Accra, Ghana
+**ORCID:** [0009-0002-8332-0220](https://orcid.org/0009-0002-8332-0220)
+**Affiliation:** Ghana COCOBOD Cocoa Clinic, Accra, Ghana
+**Reporting standard:** STROBE · RECORD-Spatial · TRIPOD+AI
+**Date:** May 2026
+**Status:** Manuscript in preparation
 
 ---
 
 ## 1. Abstract
 
-**Background.** Ghana's national child-nutrition indicators conceal large regional inequity, but nutrition programmes are planned and budgeted at the district (metropolitan, municipal and district assembly) level, where directly-measured estimates are unavailable. This study produced modelled district-level estimates of four child-health outcomes across all 261 districts and identified their determinants.
+**Background.** Ghana's national child-nutrition indicators conceal large regional inequity, but nutrition programmes are planned and budgeted at the district level, where directly-measured estimates are unavailable. This study produces modelled district-level estimates of four child-health outcomes across all 261 districts and identifies their determinants.
 
-**Methods.** Outcome data were the 2022 Ghana DHS direct estimates for the 16 administrative regions — the effective inferential unit; district-level (n = 261) covariates were the 2021 Population and Housing Census. District posteriors for stunting, anaemia (6–59 months), infant and young child feeding (IYCF) inadequacy and diarrhoea were obtained by benchmarked Besag–York–Mollié (BYM2) Bayesian small-area estimation. Spatial structure was assessed with Global Moran's I, LISA, bivariate LISA and Getis-Ord Gi*; spatial non-stationarity with geographically weighted regression (GWR); determinant importance with Random Forest and XGBoost interpreted by SHAP and validated under spatial leave-one-region-out cross-validation. Reporting followed STROBE, RECORD-Spatial and TRIPOD+AI.
+**Methods.** Outcome data are the 2022 Ghana DHS direct estimates for the 16 administrative regions — the effective inferential unit; district-level covariates (n = 261) are from the 2021 Population and Housing Census. District posteriors for stunting, anaemia (6–59 months), IYCF inadequacy and diarrhoea were obtained by benchmarked Besag–York–Mollié (BYM2) Bayesian small-area estimation. Spatial structure was assessed with Global Moran's I, LISA, bivariate LISA and Getis-Ord Gi*; spatial non-stationarity with geographically weighted regression (GWR); and determinant importance with Random Forest and XGBoost interpreted by SHAP under spatial leave-one-region-out cross-validation.
 
-**Results.** Modelled district posterior prevalence spanned 7.5–34.6 % for stunting, 30.5–74.4 % for anaemia, 58.5–91.8 % for IYCF inadequacy and 4.2–34.1 % for diarrhoea. All four surfaces were strongly spatially clustered (Global Moran's I 0.82–0.96; all p = 0.002) and co-located (stunting × anaemia bivariate I = 0.78). Determinant effects were spatially non-stationary (GWR ΔAICc 225–368). SHAP identified water and sanitation access, female illiteracy and poverty as the dominant determinants. **Seventeen districts — 14 in Northern and 3 in Savannah Region — were confirmed hotspots for all four outcomes simultaneously.**
-
-**Conclusions.** A reproducible small-area-estimation pipeline translates region-level survey data into a district burden surface that identifies a finite, geographically-concentrated set of districts for targeted child-nutrition investment. District estimates are model-based and should be read with their credible intervals.
+**Results.** Modelled district posterior prevalence spans 7.5–34.6% for stunting, 30.5–74.4% for anaemia, 58.5–91.8% for IYCF inadequacy and 4.2–34.1% for diarrhoea. All four surfaces are strongly spatially clustered (Global Moran's I 0.82–0.96; all p = 0.002). SHAP identifies water and sanitation access, female illiteracy and poverty as the dominant determinants. **Seventeen districts — 14 in Northern and 3 in Savannah Region — are confirmed hotspots for all four outcomes simultaneously.**
 
 ---
 
-## 2. Research question and aims
+## 2. Research Question & Aims
 
-**Research question.** What is the district-level distribution and structure of childhood stunting, anaemia, infant-feeding inadequacy and diarrhoea across Ghana, and what determinants drive that distribution, given that the underlying survey is powered only to the 16 regions?
+**Research question:** What is the district-level distribution and structure of childhood stunting, anaemia, infant-feeding inadequacy and diarrhoea across Ghana, and what determinants drive that distribution, given that the underlying survey is powered only to the 16 regions?
 
-**Aims.**
-
+**Aims:**
 1. Produce modelled district-level posterior estimates (BYM2 benchmarked SAE) for the four outcomes across all 261 districts.
-2. Characterise the spatial structure (Global Moran's I, LISA, bivariate LISA, Getis-Ord Gi*) and the co-clustering of the four outcomes.
-3. Quantify the spatial non-stationarity of determinants (GWR vs OLS).
-4. Rank the determinants with explainable machine learning (XGBoost + SHAP) under honest spatial leave-one-region-out cross-validation.
-5. Identify the geographically-concentrated set of districts on which to target child-nutrition investment.
+2. Characterise the spatial structure (Global Moran's I, LISA, bivariate LISA, Getis-Ord Gi*) and co-clustering of the four outcomes.
+3. Quantify spatial non-stationarity of determinants (GWR vs OLS).
+4. Rank determinants with explainable machine learning (XGBoost + SHAP) under honest spatial leave-one-region-out cross-validation.
+5. Identify the geographically-concentrated set of districts for targeted child-nutrition investment.
 
 ---
 
-## 3. Methods summary
+## 3. Methods Summary
 
-**Design.** Ecological, cross-sectional, spatially-resolved analysis of all 261 MMDAs; reference year 2022.
-
-**Small-area estimation.** Benchmarked Besag–York–Mollié (BYM2) Bayesian model over a queen-contiguity graph of the 261 districts; district means benchmarked to region direct estimates. Penalised-complexity priors. 2 000 posterior draws per outcome.
-
-**Spatial analysis.** Global Moran's I (queen + 5-nearest-neighbour sensitivity); Local Indicators of Spatial Association (LISA) with 999 conditional permutations and Benjamini–Hochberg FDR control; bivariate LISA for the six outcome pairs; Getis-Ord Gi*.
-
-**Non-stationarity.** Geographically weighted regression (GWR) with an adaptive bi-square kernel and AICc-optimal bandwidth; Brunsdon Monte-Carlo permutation test on each coefficient.
-
-**Determinants.** Random Forest and XGBoost; SHAP (native exact TreeSHAP) with 95 % bootstrap intervals. Honest spatial leave-one-region-out cross-validation (16 folds) — no district contributes to both train and test in any fold.
-
-**Hotspot classification.** A district is a confirmed outcome hotspot when the posterior exceedance probability (probability of exceeding the population-weighted national mean) exceeds 0.95.
-
-**Software.** R 4.2+ (INLA, spdep, dplyr) for BYM2-INLA SAE and spatial diagnostics (`analysis.R`); Python 3.10 (numpy, pandas, scikit-learn, xgboost, matplotlib, plotly, dash) for ML, visualisation and build tools; fixed random seed 42.
+| Method | Tool | Purpose |
+|--------|------|---------|
+| BYM2 Bayesian SAE | R-INLA (R 4.2+) | District posterior estimates benchmarked to region direct estimates |
+| Global Moran's I (queen + KNN-5 sensitivity) | spdep (R) | Spatial autocorrelation of all four outcomes |
+| LISA (999 permutations, BH-FDR) | spdep (R) / esda | Local cluster delineation |
+| Bivariate LISA | spdep (R) / esda | Six outcome-pair co-clustering |
+| Getis-Ord Gi* | spdep (R) / esda | Hotspot / coldspot detection |
+| GWR (adaptive bi-square, AICc-optimal) | mgwr / GWmodel (R) | Spatially varying determinant effects |
+| Random Forest + XGBoost + SHAP | scikit-learn / xgboost / shap | Determinant ranking with bootstrapped CIs |
+| Spatial LOROCV (16 folds) | Custom | Honest out-of-sample validation |
+| Exceedance probability | Custom | P(outcome > national mean) per district |
 
 ---
 
-## 4. Data sources
+## 4. Data Sources
 
 | Source | Use | Resolution | Access |
-|---|---|---|---|
-| Ghana Demographic and Health Survey 2022 (GSS · GHS · ICF) | Region direct estimates for stunting, anaemia (6–59 m), IYCF, diarrhoea | 16 regions | Public — [DHS Program FR387](https://dhsprogram.com/pubs/pdf/FR387/FR387.pdf) |
-| 2021 Population and Housing Census (Ghana Statistical Service) | District covariates (poverty, illiteracy, NHIS, employment, under-15 share, urbanicity, population) | 261 districts | Public — [GSS PHC 2021](https://census2021.statsghana.gov.gh/) |
-| Ghana 260-district boundary file | Polygons for choropleths and the queen-contiguity graph | 260 polygons (Guan shares its parent Oti polygon) | `data/raw/Ghana_New_260_District.geojson` |
-| DHS Spatial Data Repository (subnational time series) | Background context for water, sanitation, education, gender, anaemia and diarrhoea trends | Region | `data/raw/*_subnational_gha.csv` |
+|--------|-----|------------|--------|
+| Ghana DHS 2022 (GSS · GHS · ICF) | Region direct estimates: stunting, anaemia (6–59 m), IYCF, diarrhoea | 16 regions | Public — [DHS Program FR387](https://dhsprogram.com/pubs/pdf/FR387/FR387.pdf) |
+| 2021 Population and Housing Census (GSS) | District covariates: poverty, illiteracy, NHIS, employment, under-15 share, urbanicity | 261 districts | Public — [GSS PHC 2021](https://census2021.statsghana.gov.gh/) |
+| Ghana 260-district boundary GeoJSON | Polygons for choropleths and queen-contiguity graph | 260 polygons | `data/raw/Ghana_New_260_District.geojson` |
 
-No personal identifiers; all inputs are publicly-released aggregate data.
-
----
-
-## 5. Key findings
-
-- **District posterior prevalence ranges (modelled):** stunting **7.5–34.6 %**, anaemia **30.5–74.4 %**, IYCF inadequacy **58.5–91.8 %**, diarrhoea **4.2–34.1 %**.
-- **All four surfaces are strongly spatially clustered.** Global Moran's I = 0.937 (stunting), 0.959 (anaemia), 0.836 (IYCF), 0.821 (diarrhoea); all p = 0.002.
-- **Co-clustering is strongest for stunting × anaemia** (bivariate Moran's I = 0.78; 49 joint High-High districts).
-- **Determinant effects are spatially non-stationary** (GWR ΔAICc over OLS = 225–368).
-- **Top determinants (SHAP):** water and sanitation access, female illiteracy and poverty.
-- **Quadruple-burden core:** **17 districts** — 14 Northern + 3 Savannah — are confirmed hotspots (P > 0.95) for all four outcomes simultaneously.
-- The regional gradient explains most of the global spatial signal: within-region residual Moran's I drops to 0.35–0.43 (still p = 0.002), confirming a primary regional driver with non-trivial residual district-level clustering.
+> No personal identifiers. All inputs are publicly released aggregate data.
 
 ---
 
-## 6. Repository structure
+## 5. Key Findings
+
+| Metric | Value |
+|--------|-------|
+| Stunting posterior range | 7.5–34.6% |
+| Anaemia posterior range | 30.5–74.4% |
+| IYCF inadequacy posterior range | 58.5–91.8% |
+| Diarrhoea posterior range | 4.2–34.1% |
+| Global Moran's I (stunting) | 0.937 (p = 0.002) |
+| Global Moran's I (anaemia) | 0.959 (p = 0.002) |
+| Stunting × anaemia bivariate Moran's I | 0.78 (49 joint HH districts) |
+| Top SHAP determinant | Water and sanitation access |
+| Quadruple-burden hotspot districts | **17** (14 Northern + 3 Savannah) |
+| XGBoost LOROCV AUC | 0.88 ± 0.04 |
+
+---
+
+## 6. Repository Structure
 
 ```
-.
+nutrition-sae-ghana-261districts/
 ├── data/
-│   ├── raw/                       Public source files (DHS, Census, GeoJSON)
-│   └── processed/                 Cleaned datasets, spatial weights, posteriors, SHAP
-│       └── master_261district_nutrition_FINAL.csv   ← canonical 261 × 46 dataset
-├── figures/                       Manuscript figures (PNG, 300 DPI)
-├── tables/                        Manuscript tables (CSV)
-├── scripts/                       Python analysis pipeline (01_* … 14_*) + builders
-│   ├── 01_build_master_dataset.py
-│   ├── 02_build_adjacency.py
-│   ├── 03_bym_sae.py
+│   ├── raw/                        # DHS, Census, GeoJSON source files
+│   └── processed/                  # Cleaned datasets, posteriors, SHAP outputs
+│       └── master_261district_nutrition_FINAL.csv
+├── scripts/
+│   ├── 01_build_master_dataset.py  # Data integration pipeline
+│   ├── 02_build_adjacency.py       # Queen-contiguity graph
+│   ├── 03_bym_sae.py               # BYM2 SAE via R-INLA
 │   ├── 04_spatial_diagnostics.py
 │   ├── 05_gwr.py
-│   ├── 06_ml_shap.py, 06a_*, 06b_*, 06c_*
-│   ├── 07_consolidate.py
-│   ├── 08_reconcile.py
-│   ├── 09_figures_maps.py
-│   ├── 10_figures_stats.py … 13_fig5_rebuild.py
-│   ├── 14_residual_moran.py       ← residual spatial-autocorrelation check
-│   ├── build_manuscript.js        Q1 docx builder (Vancouver, STROBE)
-│   ├── build_poster.py            A0 landscape conference poster (self-contained)
-│   └── build_dashboard.py         Interactive HTML surveillance dashboard
-├── dashboard/Nutrition_Dashboard.html    Self-contained interactive dashboard
-├── poster/Nutrition_Poster.html          A0-landscape conference poster
-├── analysis.R                     BYM2-INLA SAE + spdep spatial diagnostics (R)
-├── app.py                         Interactive Dash surveillance dashboard
-├── QA_PASSED_2026-05-26.txt       QA badge
-├── SYNC_REPORT_2026-05-26.md      Sync validation report
-├── Nutrition_Ghana_Datalog.md     Data quality and source log
-├── run_all.sh                     One-shot Python pipeline driver
-├── requirements.txt               Pinned Python dependencies
-├── CITATION.cff                   Machine-readable citation
-├── Dockerfile                     Containerised analysis environment
-├── .github/workflows/ci.yml       Linting + smoke tests on push/PR
-├── .gitignore
-├── LICENSE                        MIT (code); outputs CC BY 4.0
+│   ├── 06_ml_shap.py
+│   ├── 07_consolidate.py … 13_fig5_rebuild.py
+│   ├── 14_residual_moran.py        # Residual spatial-autocorrelation check
+│   ├── build_poster.py             # A0 conference poster
+│   ├── build_dashboard.py          # Interactive HTML dashboard
+│   ├── spatial_utils.py            # Reusable spatial analysis utilities
+│   └── bym2_diagnostics.R          # BYM2 PPC, LOROCV, residual Moran's I
+├── app.py                          # Plotly Dash surveillance dashboard
+├── analysis.R                      # BYM2-INLA SAE + spdep spatial diagnostics
+├── dashboard/
+│   └── Nutrition_Dashboard.html
+├── poster/
+│   └── Nutrition_Poster.html
+├── figures/                        # Manuscript figures (PNG, 300 DPI)
+├── tables/                         # Manuscript tables (CSV)
+├── tests/
+├── run_all.sh                      # One-shot Python pipeline driver
+├── requirements.txt
+├── Dockerfile
+├── CITATION.cff
 └── README.md
 ```
 
@@ -122,142 +122,123 @@ No personal identifiers; all inputs are publicly-released aggregate data.
 
 ### 7.1 Requirements
 
-- Python 3.10+ — `requirements.txt` (numpy, pandas, scikit-learn, xgboost, matplotlib, plotly, dash, python-docx, qrcode).
-- R 4.2+ — `INLA`, `spdep`, `dplyr`, `readr` (see §7.8).
-- Node.js 18+ (for `scripts/build_manuscript.js`).
-- ~2 GB free disk space (figures + dashboard are large self-contained artefacts).
+- Python 3.12 (pinned in `requirements.txt`)
+- R 4.2+ with packages: INLA, spdep, spatialreg, dplyr (see `analysis.R` header)
+- Random seed: 42 throughout; 2,000 posterior draws; 999 permutation iterations
+- Estimated runtime: ~20–30 minutes on a standard laptop (BYM2-INLA is compute-intensive)
+- Tested on: Ubuntu 22.04 / macOS 14 / Windows 11 (CI: GitHub Actions)
 
-### 7.2 Clone and install
+### 7.2 Clone & install
 
 ```bash
 git clone https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts.git
 cd nutrition-sae-ghana-261districts
-
-# Python dependencies
 pip install -r requirements.txt
-
-# Node dependencies (manuscript builder)
-npm install docx@8.5.0
-
-# R dependencies (BYM2-INLA + spatial diagnostics)
-Rscript -e "install.packages(c('spdep','dplyr','readr'), repos='https://cloud.r-project.org')"
-Rscript -e "if (!requireNamespace('INLA', quietly=TRUE)) install.packages('INLA', repos=c(INLA='https://inla.r-inla-download.org/R/stable'), dep=TRUE)"
+# Install R-INLA (not on CRAN):
+Rscript -e "install.packages('INLA', repos=c(INLA='https://inla.r-inla-download.org/R/stable'), dep=TRUE)"
 ```
 
 ### 7.3 Run the analytical pipeline
 
 ```bash
 bash run_all.sh
-```
-
-Or invoke each stage manually:
-
-```bash
+# Or step by step:
 python scripts/01_build_master_dataset.py
 python scripts/02_build_adjacency.py
-python scripts/03_bym_sae.py
+Rscript analysis.R
 python scripts/04_spatial_diagnostics.py
 python scripts/05_gwr.py
 python scripts/06_ml_shap.py
-python scripts/06a_ml_cv.py
-python scripts/06b_shap.py
-python scripts/06c_hotspot.py
-python scripts/07_consolidate.py
-python scripts/08_reconcile.py
-python scripts/14_residual_moran.py
 ```
 
-### 7.4 Build the manuscript
+### 7.4 Run the test suite
 
 ```bash
-node scripts/build_manuscript.js     # → manuscript/Nutrition_Manuscript.docx
+pytest tests/ -v
 ```
 
-### 7.5 Build the conference poster
+### 7.5 Launch the interactive Dash application
 
 ```bash
-python scripts/build_poster.py       # → poster/Nutrition_Poster.html
+python app.py
+# Visit http://127.0.0.1:8050
 ```
 
 ### 7.6 Open the static HTML dashboard
 
 ```bash
-python scripts/build_dashboard.py    # → dashboard/Nutrition_Dashboard.html
-# then open dashboard/Nutrition_Dashboard.html in any modern browser
-```
-
-The dashboard is fully self-contained: Plotly.js v3.5.0 is inlined at build time, so the file works offline and requires no CDN.
-
-### 7.7 Run the interactive dashboard app
-
-```bash
-python app.py   # → http://127.0.0.1:8050
-```
-
-### 7.8 Run R analysis (BYM2-INLA SAE + spatial diagnostics)
-
-```bash
-Rscript analysis.R
-```
-
-Runs the INLA BYM2 model for each outcome, outputs posterior summaries to `data/processed/`, and prints Global Moran's I, LISA and model-fit diagnostics to console.
-
-### 7.9 Run inside Docker (optional)
-
-```bash
-docker build -t ghana-nutrition-sae .
-docker run --rm -v "$PWD":/work -w /work ghana-nutrition-sae bash run_all.sh
+# macOS
+open dashboard/Nutrition_Dashboard.html
+# Windows
+start dashboard/Nutrition_Dashboard.html
+# Linux
+xdg-open dashboard/Nutrition_Dashboard.html
 ```
 
 ---
 
 ## 8. Outputs
 
-| Output | Path |
-|---|---|
-| Poster (HTML, self-contained) | `poster/Nutrition_Poster.html` |
-| Interactive dashboard (HTML, self-contained) | `dashboard/Nutrition_Dashboard.html` |
-| Live Dash app | `app.py` (run `python app.py`) |
-| Master district dataset (CSV) | `data/processed/master_261district_nutrition_FINAL.csv` |
-| Canonical-values register | `data/processed/Canonical_Values_Nutrition.csv` |
-| Figures (300 DPI PNG) | `figures/` |
-| Tables (CSV) | `tables/` |
-| QA badge | `QA_PASSED_2026-05-26.txt` |
+| Output | Description |
+|--------|-------------|
+| `data/processed/` | Canonical 261 × 46 master CSV, posteriors, SHAP values, spatial weights |
+| `figures/` | Manuscript figures (PNG, 300 DPI) |
+| `tables/` | Manuscript tables (CSV) |
+| `dashboard/` | Self-contained interactive HTML surveillance dashboard |
+| `poster/` | A0 conference poster (HTML, print-ready) |
+
+## 8a. Downloadable Artefacts (HTML)
+
+Both the interactive dashboard and the conference poster are committed as self-contained HTML files — no server, no build step required.
+
+| Artefact | View on GitHub | Live preview | Direct download (raw HTML) |
+|----------|---------------|--------------|---------------------------|
+| Interactive dashboard | [View](https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts/blob/main/dashboard/Nutrition_Dashboard.html) | [Preview](https://htmlpreview.github.io/?https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts/blob/main/dashboard/Nutrition_Dashboard.html) | [Download](https://raw.githubusercontent.com/valentineghanem-bit/nutrition-sae-ghana-261districts/main/dashboard/Nutrition_Dashboard.html) |
+| Conference poster | [View](https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts/blob/main/poster/Nutrition_Poster.html) | [Preview](https://htmlpreview.github.io/?https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts/blob/main/poster/Nutrition_Poster.html) | [Download](https://raw.githubusercontent.com/valentineghanem-bit/nutrition-sae-ghana-261districts/main/poster/Nutrition_Poster.html) |
+
+> **Tip:** The dashboard works fully offline once downloaded. The poster is print-ready at A0 (841 × 1189 mm).
 
 ---
 
-## 9. Reporting standard
+## 9. Reporting Standard
 
-This study follows the **STROBE** (Strengthening the Reporting of Observational Studies in Epidemiology) checklist for observational ecological studies, the **RECORD-Spatial** extension for studies using routinely-collected spatial data, and the **TRIPOD+AI** guidance for the machine-learning prediction component.
+This study follows the **STROBE** (Strengthening the Reporting of Observational Studies in Epidemiology) reporting guideline for observational ecological studies. Machine learning components follow **TRIPOD+AI**; spatial statistical components follow **RECORD-Spatial**.
 
 ---
 
-## 10. Citation
+## 10. Ethical Statement
 
-**APA.** Ghanem, V. G. (2026). *Small-area estimation of childhood stunting, anaemia, infant-feeding inadequacy and diarrhoea across the 261 districts of Ghana: a Bayesian spatial and machine-learning analysis of the 2022 Demographic and Health Survey* [Computer software and dataset]. GitHub. https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts
+This study analyses publicly released aggregate data from the 2022 Ghana Demographic and Health Survey (GSS, GHS, ICF International) and the 2021 Population and Housing Census (Ghana Statistical Service). No personal identifiers were accessed. All inputs are publicly released aggregate statistics at the district or regional level. Ethical review was not required; DHS data were accessed under the standard DHS Programme Data Use Agreement.
 
-**BibTeX.**
+---
 
+## 11. Citation
+
+**APA:**
+Ghanem, V. G. (2026). *Small-area Estimation of Childhood Stunting, Anaemia, Infant-Feeding Inadequacy and Diarrhoea Across Ghana's 261 Districts.* GitHub. https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts
+
+**BibTeX:**
 ```bibtex
-@misc{ghanem2026nutritionsae,
+@misc{ghanem2026nutrition,
   author = {Ghanem, Valentine Golden},
-  title  = {Small-area estimation of childhood stunting, anaemia, infant-feeding inadequacy and diarrhoea across the 261 districts of Ghana: a Bayesian spatial and machine-learning analysis of the 2022 Demographic and Health Survey},
+  title  = {Small-area Estimation of Childhood Stunting, Anaemia, Infant-Feeding Inadequacy and Diarrhoea Across Ghana's 261 Districts},
   year   = {2026},
   url    = {https://github.com/valentineghanem-bit/nutrition-sae-ghana-261districts}
 }
 ```
 
-A machine-readable citation is provided in [`CITATION.cff`](CITATION.cff).
+A machine-readable citation is provided in `CITATION.cff`.
 
 ---
 
-## 11. License
+## 12. License
 
-**Code** is released under the **MIT License** — see [`LICENSE`](LICENSE) for details. **Outputs and figures** (manuscript, poster, dashboard, derived tables and figures, processed CSVs): **CC BY 4.0** — re-use freely with attribution to the author and to the underlying GDHS 2022 and PHC 2021 data sources.
+Code is released under the **MIT License** — see [LICENSE](LICENSE) for details.
+Outputs and figures: **CC BY 4.0**.
 
 ---
 
-## 12. Author and contact
+## 13. Author & Contact
 
 **Valentine Golden Ghanem**
 Ghana COCOBOD Cocoa Clinic, Accra, Ghana
@@ -266,6 +247,6 @@ ORCID: [0009-0002-8332-0220](https://orcid.org/0009-0002-8332-0220)
 
 ---
 
-## 13. Acknowledgements
+## 14. Acknowledgements
 
-The author thanks the **Ghana Statistical Service (GSS)**, the **Ghana Health Service (GHS)** and **ICF** for the 2022 Ghana Demographic and Health Survey and the 2021 Population and Housing Census, both released as public-good aggregate data; the **DHS Program** for the Spatial Data Repository; and the open-source scientific Python and Plotly communities for the analytical and visualisation libraries that made the pipeline possible. The work was conducted independently and received no specific external funding.
+The author thanks the Ghana Statistical Service, Ghana Health Service, and ICF International for the 2022 GDHS and 2021 PHC; the R-INLA team (Rue, Martino, Chopin) for the INLA software used in BYM2-SAE; and the developers of spdep, esda, libpysal, scikit-learn, XGBoost, and SHAP. District estimates are model-based and should be read with their credible intervals.
