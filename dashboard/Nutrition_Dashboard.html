@@ -162,7 +162,7 @@ function hBar(el,labels,vals,colors,tips,xLabel){
   const mL=148,mR=55,mT=8,mB=28,bH=22,gap=5;
   const n=labels.length;
   const h=mT+(bH+gap)*n+mB;
-  const wEl=el.getBoundingClientRect().width||500;
+  const wEl=el.offsetWidth||el.getBoundingClientRect().width||500;
   const w=Math.max(wEl,300);
   const pW=w-mL-mR;
   const mx=Math.max(...vals,0.01);
@@ -182,7 +182,7 @@ function hBar(el,labels,vals,colors,tips,xLabel){
 function vBar(el,labels,vals,colors,yLabel){
   const mL=40,mR=10,mT=12,mB=50,ch=200;
   const n=labels.length;
-  const wEl=el.getBoundingClientRect().width||500;
+  const wEl=el.offsetWidth||el.getBoundingClientRect().width||500;
   const w=Math.max(wEl,300);
   const pW=w-mL-mR;
   const bW=Math.max(12,Math.floor(pW/n)-4);
@@ -202,7 +202,7 @@ function vBar(el,labels,vals,colors,yLabel){
 
 function renderPanelC(){const el=document.getElementById('pC');if(!el)return;el.innerHTML='';
 const mL=100,mR=20,mT=26,mB=30,bH=18,gap=5,grpGap=14;
-const wEl=el.getBoundingClientRect().width||500;const w=Math.max(wEl,300);const pW=w-mL-mR;
+const wEl=el.offsetWidth||el.getBoundingClientRect().width||500;const w=Math.max(wEl,300);const pW=w-mL-mR;
 const cols=['#c0392b','#2980b9'];
 const h=mT+(2*bH+gap+grpGap)*OUT_D.length+mB;
 const svg=svgEl('svg',{width:'100%',viewBox:'0 0 '+w+' '+h,style:'display:block'},el);
@@ -232,7 +232,7 @@ el.appendChild(lg);}
 function renderPanelE(){const el=document.getElementById('pE');if(!el)return;el.innerHTML='';
 const mL=72,mR=28,mT=10,mB=14,rowH=18,gap=3;
 const n=BYM2_D.length,h=mT+(rowH+gap)*n+mB;
-const wEl=el.getBoundingClientRect().width||500;const w=Math.max(wEl,300);const pW=w-mL-mR;
+const wEl=el.offsetWidth||el.getBoundingClientRect().width||500;const w=Math.max(wEl,300);const pW=w-mL-mR;
 const allV=BYM2_D.flatMap(d=>[d.lo,d.hi]);const xMn=0,xMx=Math.max(...allV)*1.05;
 const px=v=>mL+v/xMx*pW;
 const svg=svgEl('svg',{width:'100%',viewBox:'0 0 '+w+' '+h,style:'display:block'},el);
